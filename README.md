@@ -1,38 +1,51 @@
-# 📌 Todo App - Valerio Bottari
+# 📝 Todo App - Angular Standalone Components
 
-Ciao! Questo è il mio progetto: una **Todo App moderna**, costruita con **Angular 18** in modalità **standalone**. Volevo creare qualcosa di davvero usabile, elegante e utile per organizzare le attività quotidiane.
+![GitHub repo size](https://img.shields.io/github/repo-size/imvalez/todo-angular-standalone_valeriob)
+![GitHub last commit](https://img.shields.io/github/last-commit/imvalez/todo-angular-standalone_valeriob)
+![GitHub issues](https://img.shields.io/github/issues/imvalez/todo-angular-standalone_valeriob)
+![GitHub stars](https://img.shields.io/github/stars/imvalez/todo-angular-standalone_valeriob?style=social)
+![License](https://img.shields.io/github/license/imvalez/todo-angular-standalone_valeriob)
 
-## 🎯 Cosa fa l’app
+---
 
-- Aggiungo, completo o cancello attività con pochi click.
-- L’interfaccia è **fluida, colorata e responsive**, quindi perfetta su ogni dispositivo.
-- C’è anche un **sistema di contatori** e messaggi che aiutano a capire come sto procedendo.
+## 📖 Descrizione
 
-## 🧩 Come l’ho costruita
+Questa è una **Todo App moderna** sviluppata con **Angular 18** utilizzando **componenti standalone**.  
+Permette di aggiungere, completare e rimuovere attività quotidiane in modo semplice, con un'interfaccia fluida, responsive e con animazioni eleganti.
 
-- Ho usato **componenti standalone** per rendere tutto più modulare.
-- I componenti principali sono:
-  - `AppComponent`: gestisce tutto
-  - `AddTodoComponent`: per aggiungere attività
-  - `TodoListComponent`: per visualizzarle
+La logica è centralizzata in un servizio (`TodoService`) e i dati sono gestiti tramite **TypeScript**, garantendo chiarezza e sicurezza dei tipi.
 
-## 🔄 Comunicazione tra componenti
+---
 
-Uso `@Input` e `@Output` con `EventEmitter` per far parlare i componenti tra loro, senza confusione.
+## 🎯 Funzionalità principali
 
-## 🔗 Data binding e direttive
+- **Gestione attività:** aggiungi, completa e cancella task con pochi click.  
+- **Interfaccia responsive:** ottimizzata per desktop e dispositivi mobili.  
+- **Contatori e feedback:** monitoraggio delle attività completate e in sospeso.  
+- **Animazioni e UX:** transizioni fluide e feedback visivo sulle operazioni.  
+- **Componenti standalone:** modulare, scalabile e facile da manutenere.  
+- **Comunicazione tra componenti:** tramite `@Input`, `@Output` e `EventEmitter`.  
 
-- Ho legato dati e interfaccia con **two-way binding** e direttive come `*ngFor`, `*ngIf`, `trackBy`.
-- Ho curato **stili condizionali** e **animazioni** per migliorare l’esperienza.
+---
 
-## 📦 Stato e logica centralizzati
+## 🧩 Struttura dei componenti
 
-La logica è tutta dentro un servizio (`TodoService`), in modo da mantenere l’app ordinata e scalabile.
+- `AppComponent` – entry point e gestione globale  
+- `AddTodoComponent` – aggiunta di nuove attività  
+- `TodoListComponent` – visualizzazione e gestione delle attività  
 
-## 💡 Tipo di dati sicuri
+La logica è gestita in `TodoService` per mantenere il codice pulito e riutilizzabile.
 
-Uso **TypeScript** con interfacce per rendere tutto più chiaro e sicuro.
+---
 
+## 🔗 Tecnologie utilizzate
+
+- Angular 18 (Standalone Components)  
+- TypeScript con interfacce forti  
+- CSS moderno e animazioni  
+- RxJS per eventuale gestione reattiva dei dati  
+
+**Esempio di interfaccia Todo:**
 ```ts
 interface Todo {
   id: number;
@@ -40,3 +53,49 @@ interface Todo {
   completed: boolean;
   createdAt: Date;
 }
+```
+
+---
+
+## ⚙️ Requisiti
+
+- Node.js (>=16)  
+- Angular CLI (>=15)  
+- npm o yarn  
+
+---
+
+## 🚀 Avvio del progetto
+
+1. Clona il repository:
+```sh
+git clone <url-repository>
+cd todo-angular-standalone_valeriob
+```
+
+2. Installa le dipendenze:
+```sh
+npm install
+```
+
+3. Avvia l’app:
+```sh
+ng serve
+```
+
+Apri il browser su `http://localhost:4200`.
+
+---
+
+## 👨‍💻 Autore
+
+**Valerio Bottari**  
+📧 Email: valeriobottari99@gmail.com  
+🌐 GitHub: [imvalez](https://github.com/imvalez)
+
+---
+
+## 🔖 Note
+
+- La gestione dei dati è temporanea (in-memory). Può essere estesa con backend o storage locale.  
+- L’app sfrutta il **two-way data binding**, direttive Angular (`*ngFor`, `*ngIf`) e stili condizionali.
