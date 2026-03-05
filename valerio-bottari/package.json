@@ -1,13 +1,17 @@
 {
-  "name": "valerio-bottari",
-  "version": "0.0.0",
+  "name": "todo-angular-standalone",
+  "version": "1.0.0",
+  "description": "Todo application built with Angular standalone components.",
+  "author": "@valbot",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:valerio-bottari": "node dist/valerio-bottari/server/server.mjs"
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
+    "serve:ssr": "node dist/todo-angular-standalone/server/server.mjs"
   },
   "private": true,
   "dependencies": {

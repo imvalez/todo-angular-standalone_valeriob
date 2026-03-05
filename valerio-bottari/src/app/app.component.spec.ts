@@ -14,16 +14,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'valerio-bottari' title`, () => {
+  it('should load initial todos', () => {
     const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('valerio-bottari');
+    expect(app.todos.length).toBeGreaterThan(0);
   });
 
-  it('should render title', () => {
+  it('should render app header', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, valerio-bottari');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Todo Angular Standalone');
   });
 });

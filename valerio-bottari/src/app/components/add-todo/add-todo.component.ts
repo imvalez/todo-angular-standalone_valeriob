@@ -20,7 +20,7 @@ import { CommonModule } from '@angular/common';
         <button 
           (click)="addTodo()" 
           class="add-btn"
-          [disabled]="!newTodoText?.trim()">
+          [disabled]="!newTodoText.trim()">
           Aggiungi
         </button>
       </div>
